@@ -51,7 +51,20 @@
     <audio data-key="76" src="sounds/love.wav"></audio>
     <audio data-key="80" src="sounds/periodt.wav"></audio>
 
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: 'AIzaSyAJNAQkc7gv3XcjG1d6dx8f8BuZQD4Q30A',
+        authDomain: 'js-trendy-phrases.firebaseapp.com',
+        databaseURL: 'https://js-trendy-phrases.firebaseio.com',
+        projectId: 'js-trendy-phrases',
+        storageBucket: 'js-trendy-phrases.appspot.com',
+        messagingSenderId: '537123920805'
+      };
+      firebase.initializeApp(config);
+
+      // Specific to app
       function removeTransition(e) {
         if (e.propertyName !== 'transform') return;
         e.target.classList.remove('playing');
